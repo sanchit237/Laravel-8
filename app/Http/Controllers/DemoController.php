@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    public function display(){
-        return "Hey there";
+    public function display($name){
+        return view("demo", ["user"=>$name]);
     }
 }

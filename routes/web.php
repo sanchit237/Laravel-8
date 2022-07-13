@@ -25,4 +25,4 @@ Route::get('/demo', function () {
 //Route with a only view
 Route::view('/about','about');
 
-Route::get('/user', [DemoController::class, 'display']);
+Route::get('/user/{name}', [DemoController::class, 'display']);

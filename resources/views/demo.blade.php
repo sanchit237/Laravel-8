@@ -1,1 +1,1 @@
-<h1>First Demo View</h1>
+<h1>First Demo View {{$user}}</h1>
