@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ Route::get('/demo', function () {
 
 //Route with a only view
 Route::view('/about','about');
+
+Route::get('/user', [DemoController::class, 'display']);
