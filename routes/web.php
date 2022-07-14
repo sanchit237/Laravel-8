@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::get('/demo', function () {
 Route::view('/about','about');
 
 Route::get('/user', [DemoController::class, 'display']);
+Route::post('formdata', [FormController::class, 'form']);
+
+Route::view('/form','formview');
