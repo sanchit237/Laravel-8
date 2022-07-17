@@ -30,3 +30,8 @@ Route::get('/user', [DemoController::class, 'display']);
 Route::post('formdata', [FormController::class, 'form']);
 
 Route::view('/form','formview');
+
+
+Route::get('/', function () {
+    return view('welcome');
+})->middleware('DemoMidlleware');
