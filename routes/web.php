@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\DataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,6 @@ Route::view('/form','formview')->middleware('third');
 Route::get('/', function () {
     return view('welcome');
 })->middleware('DemoMiddleware');
+
+
+Route::get('data', [DataController::class, 'index']);
