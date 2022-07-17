@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class DataController extends Controller
 {
     public function index(){
-        $result = DB::select('select * from user');
+        $result = DB::select('select * from customers');
         return $result;
     }
 }
