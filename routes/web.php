@@ -26,10 +26,10 @@ Route::get('/demo', function () {
 //Route with a only view
 Route::view('/about','about');
 
-Route::get('/user', [DemoController::class, 'display']);
+Route::get('/user', [DemoController::class, 'display'])->middleware('third');;
 Route::post('formdata', [FormController::class, 'form']);
 
-Route::view('/form','formview');
+Route::view('/form','formview')->middleware('third');
 
 
 Route::get('/', function () {
