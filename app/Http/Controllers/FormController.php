@@ -12,6 +12,8 @@ class FormController extends Controller
             'username' => 'required',
             'password' => 'required',
         ]);
-        return $req->input();
+        $data = $req->input('username');
+        $req->session()->put('user', $data);
+        return redirect('about');
     }
 }
