@@ -8,7 +8,7 @@
         </ul>
     </div>
 @endif
-<form action="formdata" method="POST">
+<form action="formdata" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="">Enter Username</label><br>
     <input type="text" name ="username">
@@ -18,5 +18,6 @@
     <input type="password" name ="password">
     <p>@error('password'){{$message}}@enderror</p>
 
+    <input type="file" name="upload" id=""> <br><br>
     <button type="submit">Login</button>
 </form>

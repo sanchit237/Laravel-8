@@ -13,6 +13,7 @@ class FormController extends Controller
             'password' => 'required',
         ]);
         $data = $req->input('username');
+        $path = $req->file('upload')->store('img');
         $req->session()->put('user', $data);
         return redirect('about');
     }
