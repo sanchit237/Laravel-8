@@ -10,8 +10,10 @@ class CustomerController extends Controller
     public function index(){
         // $result = DB::select('select * from customers');
         // return $result;
-        foreach (customer::all() as $customer) {
-            echo $customer->City;
-        }
+        // foreach (customer::all() as $customer) {
+        //     echo $customer->City;
+        // }
+        $result = customer::all();
+        return view('customerview',['cdata' => $result]);
     }
 }
