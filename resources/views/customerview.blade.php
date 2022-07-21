@@ -14,9 +14,10 @@
             <td>{{$customers['LastName']}}</td>
             <td>{{$customers['Address']}}</td>
             <td>{{$customers['City']}}</td>
+            <td><a href={{"delete/" . $customers['UserID']}}>Delete</a></td>
         </tr>
     @endforeach
     </tbody>
 </table>
 
-{{ $cdata->links() }}
+{{-- {{ $cdata->links() }} --}}

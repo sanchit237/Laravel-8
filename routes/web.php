@@ -28,11 +28,13 @@ Route::get('/demo', function () {
 
 //Route with a only view
 Route::view('/about','about');
+Route::view('/customerview','customerview');
 
 Route::get('/user', [DemoController::class, 'display'])->middleware('third');
 Route::post('formdata', [FormController::class, 'form']);
 
 Route::view('/form','formview')->middleware('third');
+// Route::view('customerview','customerview');
 
 
 Route::get('/', function () {
@@ -43,3 +45,4 @@ Route::get('/', function () {
 Route::get('data', [DataController::class, 'index']);
 Route::get('customer', [CustomerController::class, 'index']);
 Route::get('api', [ApiController::class, 'index']);
+Route::get('delete/{id}', [CustomerController::class, 'delete']);
