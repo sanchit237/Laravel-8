@@ -48,3 +48,4 @@ Route::get('api', [ApiController::class, 'index']);
 Route::get('delete/{id}', [CustomerController::class, 'delete']);
 Route::get('edit/{id}', [CustomerController::class, 'edit']);
 Route::post('update', [CustomerController::class, 'update']);
+Route::get('operations', [CustomerController::class, 'operations']);

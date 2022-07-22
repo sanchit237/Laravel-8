@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\customer;
+use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
@@ -39,5 +40,10 @@ class CustomerController extends Controller
         $result->City = $req->city;
         $result->save();
         return redirect('customer');
+    }
+
+    public function operations(){
+        // return DB::table('customers')->get();
+        return DB::table('customers')->count();
     }
 }
