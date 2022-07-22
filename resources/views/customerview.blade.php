@@ -15,6 +15,7 @@
             <td>{{$customers['Address']}}</td>
             <td>{{$customers['City']}}</td>
             <td><a href={{"delete/" . $customers['UserID']}}>Delete</a></td>
+            <td><a href={{"edit/" . $customers['UserID']}}>Edit</a></td>
         </tr>
     @endforeach
     </tbody>

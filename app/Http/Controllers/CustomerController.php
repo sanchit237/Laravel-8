@@ -25,4 +25,19 @@ class CustomerController extends Controller
         $result->delete();
         return redirect('customer');
     }
+
+    public function edit($id){
+        $result = customer::find($id);
+        return view('customerupdate',['edata'=> $result]);
+    }
+
+    public function update(Request $req){
+        $result = customer::find($req->id);
+        $result->FirstName = $req->Fname;
+        $result->LastName = $req->Lname;
+        $result->Address = $req->address;
+        $result->City = $req->city;
+        $result->save();
+        return redirect('customer');
+    }
 }

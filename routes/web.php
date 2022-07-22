@@ -46,3 +46,5 @@ Route::get('data', [DataController::class, 'index']);
 Route::get('customer', [CustomerController::class, 'index']);
 Route::get('api', [ApiController::class, 'index']);
 Route::get('delete/{id}', [CustomerController::class, 'delete']);
+Route::get('edit/{id}', [CustomerController::class, 'edit']);
+Route::post('update', [CustomerController::class, 'update']);
