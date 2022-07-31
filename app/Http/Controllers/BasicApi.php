@@ -9,7 +9,7 @@ use App\Models\customer;
 class BasicApi extends Controller
 {
     public function getData(){
-        $data = array('name'=>'abc','age'=>20,'city'=>'mumbai');
+        $data = array('name'=>'abc','age'=>25,'city'=>'mumbai');
         return $data;
     }
     public function getdbData(){
